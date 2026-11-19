@@ -1,0 +1,229 @@
+2026-11-17 08:20:08.090 +03:30 [INF] ========================================
+2026-11-17 08:20:08.132 +03:30 [INF] StaffPortal API Backend - Build Version 0.88
+2026-11-17 08:20:08.138 +03:30 [INF] Started at (Persian): 1405/08/26 08:20:08
+2026-11-17 08:20:08.139 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:20:08
+2026-11-17 08:20:08.140 +03:30 [INF] ========================================
+2026-11-17 08:20:08.140 +03:30 [INF] 
+2026-11-17 08:20:08.484 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:20:08.484 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:20:08.491 +03:30 [INF] Next bulk inquiry at "2026-11-17T08:37:00.0000000+03:30" (in 0.3 hours).
+2026-11-17 08:20:08.876 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:20:08.878 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:20:08.949 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:20:08.950 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:20:08.951 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:20:40.107 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:20:40.109 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:20:41.070 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:20:41.071 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:20:41.072 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:20:41.073 +03:30 [INF] Next SMS sync at 08:30:41 (in 10 min).
+2026-11-17 08:47:28.409 +03:30 [INF] ========================================
+2026-11-17 08:47:28.441 +03:30 [INF] StaffPortal API Backend - Build Version 0.89
+2026-11-17 08:47:28.446 +03:30 [INF] Started at (Persian): 1405/08/26 08:47:28
+2026-11-17 08:47:28.447 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:47:28
+2026-11-17 08:47:28.447 +03:30 [INF] ========================================
+2026-11-17 08:47:28.448 +03:30 [INF] 
+2026-11-17 08:47:28.694 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:47:28.694 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:47:28.699 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 23.8 hours).
+2026-11-17 08:47:28.943 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:47:28.944 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:47:28.989 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:47:28.990 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:47:28.991 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:47:37.572 +03:30 [ERR] خطا در دریافت اطلاعات پایه ComprehensiveCustomerProfile
+Microsoft.Data.SqlClient.SqlException (0x80131904): An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near 'N'.
+Unclosed quotation mark after the character string '
+
+'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 205
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 211
+   at StaffPortal.Endpoints.ComprehensiveCustomerProfileEndpoints.HandleBaseInfo(ComprehensiveBaseInfoRequest request, IComprehensiveCustomerProfileService service, ILogger`1 logger) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Endpoints\ComprehensiveCustomerProfilesEndpoint.cs:line 892
+ClientConnectionId:0cf265db-e5fa-40b3-a76b-7f2b79ad731e
+Error Number:1038,State:4,Class:15
+2026-11-17 08:48:00.487 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:48:00.489 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:48:00.583 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:48:00.586 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:48:00.588 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:48:00.589 +03:30 [INF] Next SMS sync at 08:58:00 (in 10 min).
+2026-11-17 08:48:27.743 +03:30 [INF] ========================================
+2026-11-17 08:48:27.779 +03:30 [INF] StaffPortal API Backend - Build Version 0.90
+2026-11-17 08:48:27.784 +03:30 [INF] Started at (Persian): 1405/08/26 08:48:27
+2026-11-17 08:48:27.784 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:48:27
+2026-11-17 08:48:27.785 +03:30 [INF] ========================================
+2026-11-17 08:48:27.785 +03:30 [INF] 
+2026-11-17 08:48:28.017 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:48:28.017 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:48:28.025 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 23.8 hours).
+2026-11-17 08:48:28.293 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:48:28.294 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:48:28.344 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:48:28.344 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:48:28.345 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:48:32.332 +03:30 [ERR] خطا در دریافت اطلاعات پایه ComprehensiveCustomerProfile
+Microsoft.Data.SqlClient.SqlException (0x80131904): An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near 'N'.
+Unclosed quotation mark after the character string '
+
+'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 205
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 211
+   at StaffPortal.Endpoints.ComprehensiveCustomerProfileEndpoints.HandleBaseInfo(ComprehensiveBaseInfoRequest request, IComprehensiveCustomerProfileService service, ILogger`1 logger) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Endpoints\ComprehensiveCustomerProfilesEndpoint.cs:line 892
+ClientConnectionId:bf75afe9-a569-449c-86ac-85f0473ff0ee
+Error Number:1038,State:4,Class:15
+2026-11-17 08:48:59.210 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:48:59.214 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:48:59.337 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:48:59.339 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:48:59.340 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:48:59.340 +03:30 [INF] Next SMS sync at 08:58:59 (in 10 min).
+2026-11-17 08:49:09.555 +03:30 [INF] ========================================
+2026-11-17 08:49:09.588 +03:30 [INF] StaffPortal API Backend - Build Version 0.91
+2026-11-17 08:49:09.594 +03:30 [INF] Started at (Persian): 1405/08/26 08:49:09
+2026-11-17 08:49:09.595 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:49:09
+2026-11-17 08:49:09.595 +03:30 [INF] ========================================
+2026-11-17 08:49:09.595 +03:30 [INF] 
+2026-11-17 08:49:09.810 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:49:09.810 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:49:09.813 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 23.8 hours).
+2026-11-17 08:49:10.048 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:49:10.050 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:49:10.097 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:49:10.098 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:49:10.098 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:49:16.929 +03:30 [ERR] خطا در دریافت اطلاعات پایه ComprehensiveCustomerProfile
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'status'.
+Incorrect syntax near 'N'.
+Unclosed quotation mark after the character string '
+
+'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 205
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 211
+   at StaffPortal.Endpoints.ComprehensiveCustomerProfileEndpoints.HandleBaseInfo(ComprehensiveBaseInfoRequest request, IComprehensiveCustomerProfileService service, ILogger`1 logger) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Endpoints\ComprehensiveCustomerProfilesEndpoint.cs:line 892
+ClientConnectionId:eb3b10f1-001b-4b3a-83bd-44b6bc78d88c
+Error Number:102,State:1,Class:15
+2026-11-17 08:49:40.628 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:49:40.629 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:49:40.717 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:49:40.719 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:49:40.719 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:49:40.720 +03:30 [INF] Next SMS sync at 08:59:40 (in 10 min).
+2026-11-17 08:50:52.983 +03:30 [INF] ========================================
+2026-11-17 08:50:53.013 +03:30 [INF] StaffPortal API Backend - Build Version 0.92
+2026-11-17 08:50:53.018 +03:30 [INF] Started at (Persian): 1405/08/26 08:50:53
+2026-11-17 08:50:53.019 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:50:53
+2026-11-17 08:50:53.019 +03:30 [INF] ========================================
+2026-11-17 08:50:53.019 +03:30 [INF] 
+2026-11-17 08:50:53.248 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:50:53.248 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:50:53.254 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 23.8 hours).
+2026-11-17 08:50:53.485 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:50:53.486 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:50:53.533 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:50:53.533 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:50:53.534 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:51:02.068 +03:30 [ERR] خطا در دریافت اطلاعات پایه ComprehensiveCustomerProfile
+Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near 'status'.
+Incorrect syntax near ';'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 204
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetBaseInfoAsync(String nationalCode, String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 210
+   at StaffPortal.Endpoints.ComprehensiveCustomerProfileEndpoints.HandleBaseInfo(ComprehensiveBaseInfoRequest request, IComprehensiveCustomerProfileService service, ILogger`1 logger) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Endpoints\ComprehensiveCustomerProfilesEndpoint.cs:line 892
+ClientConnectionId:339f9aec-ed24-40d5-a425-2a2f3a4e548f
+Error Number:102,State:1,Class:15
+2026-11-17 08:51:24.263 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:51:24.264 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:51:24.430 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:51:24.433 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:51:24.434 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:51:24.437 +03:30 [INF] Next SMS sync at 09:01:24 (in 10 min).
+2026-11-17 08:52:13.634 +03:30 [INF] ========================================
+2026-11-17 08:52:13.669 +03:30 [INF] StaffPortal API Backend - Build Version 0.93
+2026-11-17 08:52:13.674 +03:30 [INF] Started at (Persian): 1405/08/26 08:52:13
+2026-11-17 08:52:13.675 +03:30 [INF] Started at (Gregorian): 2026-11-17 08:52:13
+2026-11-17 08:52:13.675 +03:30 [INF] ========================================
+2026-11-17 08:52:13.675 +03:30 [INF] 
+2026-11-17 08:52:13.944 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 08:52:13.944 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 08:52:13.951 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 23.7 hours).
+2026-11-17 08:52:14.163 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 08:52:14.164 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 08:52:14.222 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 08:52:14.223 +03:30 [INF] Hosting environment: Development
+2026-11-17 08:52:14.224 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-17 08:52:44.850 +03:30 [INF] Parsed 188 messages from SOAP response
+2026-11-17 08:52:44.852 +03:30 [INF] Received 188 messages in iteration 1
+2026-11-17 08:52:44.971 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-17 08:52:44.974 +03:30 [INF] No new rows inserted. All 188 messages already in DB. Stopping.
+2026-11-17 08:52:44.976 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-17 08:52:44.977 +03:30 [INF] Next SMS sync at 09:02:44 (in 10 min).
+2026-11-17 11:34:29.717 +03:30 [INF] ========================================
+2026-11-17 11:34:29.749 +03:30 [INF] StaffPortal API Backend - Build Version 0.94
+2026-11-17 11:34:29.756 +03:30 [INF] Started at (Persian): 1405/08/26 11:34:29
+2026-11-17 11:34:29.757 +03:30 [INF] Started at (Gregorian): 2026-11-17 11:34:29
+2026-11-17 11:34:29.758 +03:30 [INF] ========================================
+2026-11-17 11:34:29.758 +03:30 [INF] 
+2026-11-17 11:34:30.205 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-17 11:34:30.205 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-17 11:34:30.231 +03:30 [INF] Next bulk inquiry at "2026-11-18T08:37:00.0000000+03:30" (in 21.0 hours).
+2026-11-17 11:34:30.890 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-17 11:34:30.892 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-17 11:34:31.003 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-17 11:34:31.004 +03:30 [INF] Hosting environment: Development
+2026-11-17 11:34:31.005 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal

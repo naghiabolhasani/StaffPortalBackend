@@ -1,0 +1,23 @@
+2026-11-10 17:26:08.906 +03:30 [INF] ========================================
+2026-11-10 17:26:08.937 +03:30 [INF] StaffPortal API Backend - Build Version 0.84
+2026-11-10 17:26:08.943 +03:30 [INF] Started at (Persian): 1405/08/19 17:26:08
+2026-11-10 17:26:08.944 +03:30 [INF] Started at (Gregorian): 2026-11-10 17:26:08
+2026-11-10 17:26:08.945 +03:30 [INF] ========================================
+2026-11-10 17:26:08.946 +03:30 [INF] 
+2026-11-10 17:26:09.323 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-10 17:26:09.325 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-10 17:26:09.329 +03:30 [INF] Next bulk inquiry at "2026-11-11T08:37:00.0000000+03:30" (in 15.2 hours).
+2026-11-10 17:26:09.738 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-10 17:26:09.739 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-10 17:26:09.810 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-10 17:26:09.810 +03:30 [INF] Hosting environment: Development
+2026-11-10 17:26:09.811 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-10 17:26:40.454 +03:30 [INF] Parsed 153 messages from SOAP response
+2026-11-10 17:26:40.461 +03:30 [INF] Received 153 messages in iteration 1
+2026-11-10 17:26:41.589 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-10 17:26:41.597 +03:30 [INF] No new rows inserted. All 153 messages already in DB. Stopping.
+2026-11-10 17:26:41.601 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-10 17:26:41.604 +03:30 [INF] Next SMS sync at 18:26:41 (in 60 min).
+2026-11-10 17:28:35.674 +03:30 [INF] Loaded 21 permissions for user 1
+2026-11-10 17:28:35.687 +03:30 [INF] Loaded 21 permissions for user 1
+2026-11-10 17:28:35.691 +03:30 [INF] Staff login successful for user 1 (abolhasani)

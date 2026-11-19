@@ -1,0 +1,224 @@
+2026-11-02 09:11:05.370 +03:30 [INF] ========================================
+2026-11-02 09:11:05.398 +03:30 [INF] StaffPortal API Backend - Build Version 0.69
+2026-11-02 09:11:05.403 +03:30 [INF] Started at (Persian): 1405/08/11 09:11:05
+2026-11-02 09:11:05.404 +03:30 [INF] Started at (Gregorian): 2026-11-02 09:11:05
+2026-11-02 09:11:05.404 +03:30 [INF] ========================================
+2026-11-02 09:11:05.405 +03:30 [INF] 
+2026-11-02 09:11:05.778 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 09:11:05.790 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 09:11:05.792 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 23.4 hours).
+2026-11-02 09:11:06.170 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-02 09:11:06.171 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-02 09:11:06.242 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 09:11:06.243 +03:30 [INF] Hosting environment: Development
+2026-11-02 09:11:06.244 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 09:11:36.748 +03:30 [INF] Parsed 120 messages from SOAP response
+2026-11-02 09:11:36.754 +03:30 [INF] Received 120 messages in iteration 1
+2026-11-02 09:11:37.880 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 09:11:37.886 +03:30 [INF] No new rows inserted. All 120 messages already in DB. Stopping.
+2026-11-02 09:11:37.887 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 09:11:37.888 +03:30 [INF] Next SMS sync at 09:21:37 (in 10 min).
+2026-11-02 09:17:49.517 +03:30 [ERR] خطا در دریافت اطلاعات تامین کننده مالی
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'TimeUpdate'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetSponserAsync(String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 525
+   at StaffPortal.Services.ComprehensiveCustomerProfileService.GetSponserAsync(String contractNo) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\ComprehensiveCustomerProfileService.cs:line 526
+   at StaffPortal.Endpoints.ComprehensiveCustomerProfileEndpoints.HandleSponser(SponserRequest request, IComprehensiveCustomerProfileService service, ILogger`1 logger) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Endpoints\ComprehensiveCustomerProfilesEndpoint.cs:line 665
+ClientConnectionId:428605e1-13e8-42a7-a63b-9563a05f76ef
+Error Number:207,State:1,Class:16
+2026-11-02 09:23:47.695 +03:30 [INF] ========================================
+2026-11-02 09:23:47.809 +03:30 [INF] StaffPortal API Backend - Build Version 0.70
+2026-11-02 09:23:47.819 +03:30 [INF] Started at (Persian): 1405/08/11 09:23:47
+2026-11-02 09:23:47.822 +03:30 [INF] Started at (Gregorian): 2026-11-02 09:23:47
+2026-11-02 09:23:47.823 +03:30 [INF] ========================================
+2026-11-02 09:23:47.823 +03:30 [INF] 
+2026-11-02 09:23:48.114 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 09:23:48.122 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 09:23:48.133 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 23.2 hours).
+2026-11-02 09:23:48.605 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-02 09:23:48.611 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-02 09:23:48.675 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 09:23:48.676 +03:30 [INF] Hosting environment: Development
+2026-11-02 09:23:48.678 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 09:24:17.242 +03:30 [INF] Rahbar_Arrears updated: ContractNo=140313042772, InstallmentNo=1403542264601, ArrearsCount=0, Total=0
+2026-11-02 09:24:18.857 +03:30 [INF] Parsed 120 messages from SOAP response
+2026-11-02 09:24:18.862 +03:30 [INF] Received 120 messages in iteration 1
+2026-11-02 09:24:18.961 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 09:24:18.967 +03:30 [INF] No new rows inserted. All 120 messages already in DB. Stopping.
+2026-11-02 09:24:18.969 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 09:24:18.971 +03:30 [INF] Next SMS sync at 09:34:18 (in 10 min).
+2026-11-02 09:34:19.720 +03:30 [INF] Parsed 120 messages from SOAP response
+2026-11-02 09:34:19.726 +03:30 [INF] Received 120 messages in iteration 1
+2026-11-02 09:34:19.758 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 09:34:19.761 +03:30 [INF] No new rows inserted. All 120 messages already in DB. Stopping.
+2026-11-02 09:34:19.762 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 09:34:19.763 +03:30 [INF] Next SMS sync at 09:44:19 (in 10 min).
+2026-11-02 10:15:27.508 +03:30 [INF] ========================================
+2026-11-02 10:15:27.544 +03:30 [INF] StaffPortal API Backend - Build Version 0.71
+2026-11-02 10:15:27.549 +03:30 [INF] Started at (Persian): 1405/08/11 10:15:27
+2026-11-02 10:15:27.550 +03:30 [INF] Started at (Gregorian): 2026-11-02 10:15:27
+2026-11-02 10:15:27.551 +03:30 [INF] ========================================
+2026-11-02 10:15:27.551 +03:30 [INF] 
+2026-11-02 10:15:27.791 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 10:15:27.791 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 10:15:27.795 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 22.4 hours).
+2026-11-02 10:15:28.041 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-02 10:15:28.042 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-02 10:15:28.088 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 10:15:28.089 +03:30 [INF] Hosting environment: Development
+2026-11-02 10:15:28.089 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 11:20:18.820 +03:30 [INF] ========================================
+2026-11-02 11:20:18.846 +03:30 [INF] StaffPortal API Backend - Build Version 0.72
+2026-11-02 11:20:18.853 +03:30 [INF] Started at (Persian): 1405/08/11 11:20:18
+2026-11-02 11:20:18.855 +03:30 [INF] Started at (Gregorian): 2026-11-02 11:20:18
+2026-11-02 11:20:18.856 +03:30 [INF] ========================================
+2026-11-02 11:20:18.856 +03:30 [INF] 
+2026-11-02 11:20:19.077 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 11:20:19.077 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 11:20:19.081 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 21.3 hours).
+2026-11-02 11:20:19.419 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-02 11:20:19.420 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-02 11:20:19.471 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 11:20:19.472 +03:30 [INF] Hosting environment: Development
+2026-11-02 11:20:19.472 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 11:20:50.038 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 11:20:50.042 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 11:20:50.585 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 11:20:50.592 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 11:20:50.593 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 11:20:50.595 +03:30 [INF] Next SMS sync at 11:30:50 (in 10 min).
+2026-11-02 11:21:00.625 +03:30 [INF] =====================
+2026-11-02 11:21:00.629 +03:30 [INF] Bulk inquiry started...
+2026-11-02 11:21:01.221 +03:30 [INF] Bulk inquiry: 43310 unique pairs to process.
+2026-11-02 16:42:55.896 +03:30 [INF] ========================================
+2026-11-02 16:42:55.929 +03:30 [INF] StaffPortal API Backend - Build Version 0.73
+2026-11-02 16:42:55.935 +03:30 [INF] Started at (Persian): 1405/08/11 16:42:55
+2026-11-02 16:42:55.935 +03:30 [INF] Started at (Gregorian): 2026-11-02 16:42:55
+2026-11-02 16:42:55.936 +03:30 [INF] ========================================
+2026-11-02 16:42:55.937 +03:30 [INF] 
+2026-11-02 16:42:56.225 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 16:42:56.225 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 16:42:56.231 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 15.9 hours).
+2026-11-02 16:43:32.062 +03:30 [INF] ========================================
+2026-11-02 16:43:32.087 +03:30 [INF] StaffPortal API Backend - Build Version 0.74
+2026-11-02 16:43:32.091 +03:30 [INF] Started at (Persian): 1405/08/11 16:43:32
+2026-11-02 16:43:32.092 +03:30 [INF] Started at (Gregorian): 2026-11-02 16:43:32
+2026-11-02 16:43:32.093 +03:30 [INF] ========================================
+2026-11-02 16:43:32.094 +03:30 [INF] 
+2026-11-02 16:43:32.171 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 16:43:32.171 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 16:43:32.174 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 15.9 hours).
+2026-11-02 16:43:32.289 +03:30 [INF] Now listening on: http://[::]:5000
+2026-11-02 16:43:32.293 +03:30 [INF] Now listening on: https://[::]:7187
+2026-11-02 16:43:32.295 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 16:43:32.295 +03:30 [INF] Hosting environment: Development
+2026-11-02 16:43:32.295 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 16:43:45.823 +03:30 [INF] =====================
+2026-11-02 16:43:45.825 +03:30 [INF] Bulk inquiry started...
+2026-11-02 16:43:45.979 +03:30 [ERR] Bulk inquiry failed
+Microsoft.Data.SqlClient.SqlException (0x80131904): Ambiguous column name 'InstallmentNo'.
+Ambiguous column name 'NationalCode'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__270_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at StaffPortal.Services.RahbarService.RunBulkInquiryAsync(CancellationToken ct) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\RahbarService.cs:line 296
+   at StaffPortal.Services.RahbarService.RunBulkInquiryAsync(CancellationToken ct) in D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal\Services\RahbarService.cs:line 383
+ClientConnectionId:15d65a69-faa9-4c36-aa38-52033f278abd
+Error Number:209,State:1,Class:16
+2026-11-02 16:44:32.810 +03:30 [INF] ========================================
+2026-11-02 16:44:32.836 +03:30 [INF] StaffPortal API Backend - Build Version 0.75
+2026-11-02 16:44:32.842 +03:30 [INF] Started at (Persian): 1405/08/11 16:44:32
+2026-11-02 16:44:32.843 +03:30 [INF] Started at (Gregorian): 2026-11-02 16:44:32
+2026-11-02 16:44:32.844 +03:30 [INF] ========================================
+2026-11-02 16:44:32.844 +03:30 [INF] 
+2026-11-02 16:44:33.075 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 16:44:33.075 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 16:44:33.079 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 15.9 hours).
+2026-11-02 16:44:33.288 +03:30 [INF] Now listening on: https://localhost:7215
+2026-11-02 16:44:33.290 +03:30 [INF] Now listening on: http://localhost:5215
+2026-11-02 16:44:33.332 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 16:44:33.334 +03:30 [INF] Hosting environment: Development
+2026-11-02 16:44:33.335 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 16:44:45.442 +03:30 [INF] ========================================
+2026-11-02 16:44:45.469 +03:30 [INF] StaffPortal API Backend - Build Version 0.76
+2026-11-02 16:44:45.476 +03:30 [INF] Started at (Persian): 1405/08/11 16:44:45
+2026-11-02 16:44:45.477 +03:30 [INF] Started at (Gregorian): 2026-11-02 16:44:45
+2026-11-02 16:44:45.478 +03:30 [INF] ========================================
+2026-11-02 16:44:45.478 +03:30 [INF] 
+2026-11-02 16:44:45.560 +03:30 [INF] RahbarBulkInquiryBackgroundService started. Daily run at "08:37:00".
+2026-11-02 16:44:45.560 +03:30 [INF] SmsSyncBackgroundService started. Business hours (7:00-17:00): every 10 min. Off hours: every 60 min.
+2026-11-02 16:44:45.565 +03:30 [INF] Next bulk inquiry at "2026-11-03T08:37:00.0000000+03:30" (in 15.9 hours).
+2026-11-02 16:44:45.670 +03:30 [INF] Now listening on: http://[::]:5000
+2026-11-02 16:44:45.673 +03:30 [INF] Now listening on: https://[::]:7187
+2026-11-02 16:44:45.674 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-02 16:44:45.675 +03:30 [INF] Hosting environment: Development
+2026-11-02 16:44:45.675 +03:30 [INF] Content root path: D:\@Staff Portal\Staff Portal Backend\xxx StaffPortal
+2026-11-02 16:44:47.186 +03:30 [INF] =====================
+2026-11-02 16:44:47.189 +03:30 [INF] Bulk inquiry started...
+2026-11-02 16:44:47.667 +03:30 [INF] Bulk inquiry: 33088 unique pairs to process.
+2026-11-02 16:45:16.272 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 16:45:16.277 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 16:45:16.333 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 16:45:16.336 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 16:45:16.337 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 16:45:16.337 +03:30 [INF] Next SMS sync at 16:55:16 (in 10 min).
+2026-11-02 16:55:16.972 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 16:55:16.979 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 16:55:17.004 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 16:55:17.007 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 16:55:17.008 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 16:55:17.008 +03:30 [INF] Next SMS sync at 17:05:17 (in 10 min).
+2026-11-02 17:05:17.629 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 17:05:17.634 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 17:05:17.661 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 17:05:17.664 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 17:05:17.665 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 17:05:17.666 +03:30 [INF] Next SMS sync at 18:05:17 (in 60 min).
+2026-11-02 18:05:18.161 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 18:05:18.165 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 18:05:18.203 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 18:05:18.205 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 18:05:18.205 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 18:05:18.206 +03:30 [INF] Next SMS sync at 19:05:18 (in 60 min).
+2026-11-02 19:05:18.748 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 19:05:18.752 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 19:05:18.788 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 19:05:18.791 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 19:05:18.792 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 19:05:18.793 +03:30 [INF] Next SMS sync at 20:05:18 (in 60 min).
+2026-11-02 20:05:19.444 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 20:05:19.447 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 20:05:19.469 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 20:05:19.472 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 20:05:19.472 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 20:05:19.473 +03:30 [INF] Next SMS sync at 21:05:19 (in 60 min).
+2026-11-02 21:05:20.069 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 21:05:20.073 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 21:05:20.105 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 21:05:20.108 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 21:05:20.109 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 21:05:20.110 +03:30 [INF] Next SMS sync at 22:05:20 (in 60 min).
+2026-11-02 22:05:21.295 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 22:05:21.300 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 22:05:21.330 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 22:05:21.332 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 22:05:21.332 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 22:05:21.333 +03:30 [INF] Next SMS sync at 23:05:21 (in 60 min).
+2026-11-02 23:05:22.741 +03:30 [INF] Parsed 121 messages from SOAP response
+2026-11-02 23:05:22.745 +03:30 [INF] Received 121 messages in iteration 1
+2026-11-02 23:05:22.775 +03:30 [INF] Iteration 1: 0 rows inserted.
+2026-11-02 23:05:22.777 +03:30 [INF] No new rows inserted. All 121 messages already in DB. Stopping.
+2026-11-02 23:05:22.778 +03:30 [INF] Sync finished. Iterations: 1, Total inserted: 0
+2026-11-02 23:05:22.778 +03:30 [INF] Next SMS sync at 00:05:22 (in 60 min).
