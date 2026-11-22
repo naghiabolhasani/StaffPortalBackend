@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using StaffPortal.Common;
 using StaffPortal.Interfaces;
 using StaffPortal.Models;
 using System;
@@ -1345,7 +1346,8 @@ WHERE [ID] = @TemplateMessageId
             .Replace("[ContractRef]", contractRef.ToString())
             .Replace("[ForFeit]", (string?)contractData.ForFeit ?? "0")
             .Replace("[ClearAmount]", (string?)contractData.ClearAmount ?? "0")
-            .Replace("[Moavagh]", (string?)contractData.Moavagh ?? "0");
+            .Replace("[Moavagh]", (string?)contractData.Moavagh ?? "0")
+            .Replace("[TodayDate]", CommonMethod.GetCurrentPersianDate());
 
         // ═══════════════════════════════════════════════════════════
         //  ۵. تراکنش: FUNSms + SmsSend
