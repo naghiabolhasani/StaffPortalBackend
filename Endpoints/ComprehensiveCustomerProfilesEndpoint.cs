@@ -232,6 +232,17 @@ public static class ComprehensiveCustomerProfileEndpoints
     .Produces<StandardResponse<SendTemplateSmsResult>>(200)
     .Produces<StandardResponse<object>>(400)
     .Produces<StandardResponse<object>>(500);
+
+        app.MapPost("/comprehensive-customer-profile/send-custom-sms", HandleSendCustomSms)
+            .WithName("ComprehensiveSendCustomSms")
+            .WithDescription("ارسال پیامک دلخواه برای قرارداد")
+            .WithTags("ComprehensiveCustomerProfile")
+            .RequireAuthorization()
+            .RequirePermission("ComprehensiveCustomerProfiles.CustomSms")
+            .Accepts<SendCustomSmsRequest>("application/json")
+            .Produces<StandardResponse<SendCustomSmsResult>>(200)
+            .Produces<StandardResponse<object>>(400)
+            .Produces<StandardResponse<object>>(500);
     }
 
 
@@ -313,6 +324,83 @@ public static class ComprehensiveCustomerProfileEndpoints
                 statusCode: 500);
         }
     }
+
+    private static async Task<IResult> HandleSendCustomSms(
+        HttpContext httpContext,
+        [FromBody] SendCustomSmsRequest request,
+        [FromServices] IComprehensiveCustomerProfileService service,
+        [FromServices] ILogger<Program> logger)
+    {
+        if (request == null)
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("بدنه درخواست نامعتبر است."),
+                statusCode: 400);
+        }
+
+        if (!httpContext.Request.Headers.TryGetValue("UserId", out var userIdHeader) ||
+            !long.TryParse(userIdHeader.FirstOrDefault(), out long userId) ||
+            userId <= 0)
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("هدر UserId نامعتبر یا ناموجود است."),
+                statusCode: 400);
+        }
+
+        var message = request.Message?.Trim() ?? "";
+        if (message.Length < 10)
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("متن پیام باید حداقل ۱۰ کاراکتر باشد."),
+                statusCode: 400);
+        }
+
+        if (string.IsNullOrWhiteSpace(request.ContractNo))
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("شماره قرارداد اجباری است."),
+                statusCode: 400);
+        }
+
+        var contractNo = request.ContractNo.Trim();
+        if (!InputValidator.IsSafeString(contractNo, @"^\d{1,30}$"))
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("شماره قرارداد نامعتبر است."),
+                statusCode: 400);
+        }
+
+        try
+        {
+            var result = await service.SendCustomSmsAsync(message, contractNo, userId);
+
+            if (!result.IsSuccess)
+            {
+                return Results.Json(
+                    StandardResponse<object>.Failure(result.Message ?? "خطا در پردازش"),
+                    statusCode: 400);
+            }
+
+            return Results.Ok(new StandardResponse<SendCustomSmsResult>
+            {
+                IsSuccess = true,
+                Message = result.Message ?? "پیام با موفقیت ثبت شد.",
+                Data = result,
+                Count = 1
+            });
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex,
+                "خطا در SendCustomSms برای ContractNo={ContractNo}",
+                contractNo);
+
+            return Results.Json(
+                StandardResponse<object>.Failure("خطای داخلی سرور"),
+                statusCode: 500);
+        }
+    }
+
     private static async Task<IResult> HandleContractDetail(
     [FromBody] ContractRefRequest request,
     [FromServices] IComprehensiveCustomerProfileService service,

@@ -10,6 +10,7 @@ public interface IComprehensiveCustomerProfileService
         string? nationalCode,
         string? contractNo);
     Task<SendTemplateSmsResult> SendTemplateSmsAsync(long templateMessageId, string contractNo, long userId);
+    Task<SendCustomSmsResult> SendCustomSmsAsync(string message, string contractNo, long userId);
     Task<UpdateRahbarResult> UpdateRahbarAsync(string contractNo, string installmentNo);
     Task<List<ComprehensivePayDetailItem>> GetPayDetailAsync(long contractRef);
     Task<List<ContractDetailItem>> GetContractDetailAsync(long contractRef);

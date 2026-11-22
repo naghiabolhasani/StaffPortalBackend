@@ -1362,7 +1362,7 @@ INSERT INTO Leasing.dbo.FUNSms
 VALUES
     (@Mobile, @SmsText, 
      CAST(FORMAT(GETDATE(), 'yyyyMMdd', 'fa-ir') AS INT),
-     FORMAT(GETDATE(), 'HH:mm', 'fa-ir'), 
+     CONVERT(varchar(5), GETDATE(), 108), 
      @UserRef, @ContractRef);
 
 SELECT CAST(SCOPE_IDENTITY() AS BIGINT);";
@@ -1386,7 +1386,7 @@ INSERT INTO [DarikAssistant].[gen].[SmsSend]
 VALUES
     (@SmsText, @Mobile, 
      CAST(FORMAT(GETDATE(), 'yyyyMMdd', 'fa-ir') AS INT),
-     FORMAT(GETDATE(), 'HH:mm', 'fa-ir'),
+     CONVERT(varchar(5), GETDATE(), 108),
      @ContractRef, @DarikFunSmsRef, @MessageTemplateRef, @UserRef);";
 
             await connection.ExecuteAsync(
@@ -1419,6 +1419,146 @@ VALUES
                 templateMessageId, contractNo);
 
             return new SendTemplateSmsResult
+            {
+                IsSuccess = false,
+                Message = $"خطا در ذخیره در دیتابیس: {ex.Message}"
+            };
+        }
+    }
+
+    public async Task<SendCustomSmsResult> SendCustomSmsAsync(
+        string message,
+        string contractNo,
+        long userId)
+    {
+        await using var connection = new SqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+        const string userSql = @"
+SELECT [DarikUserRef]
+FROM [DarikAssistant].[app].[Users]
+WHERE Id = @UserId;";
+
+        var darikUserRef = await connection.QueryFirstOrDefaultAsync<long?>(
+            userSql,
+            new { UserId = userId });
+
+        if (darikUserRef == null || darikUserRef <= 0)
+        {
+            return new SendCustomSmsResult
+            {
+                IsSuccess = false,
+                Message = "برای شما DarikUserRef ثبت نشده است. لطفاً با واحد IT تماس بگیرید."
+            };
+        }
+
+        const string contractSql = @"
+SELECT 
+    cc.Mobile1   AS Mobile1,
+    C.ContractNo AS ContractNo,
+    C.Serial     AS ContractRef
+FROM DarikAssistant.dbo.ContractGrade G WITH (NOLOCK)
+INNER JOIN Leasing.dbo.FUNContract C WITH (NOLOCK) 
+    ON G.ContractRef = C.Serial
+INNER JOIN Leasing.dbo.FUNCustomer CU WITH (NOLOCK) 
+    ON C.CifRef = CU.Serial
+INNER JOIN Leasing.dbo.[Clear#] L WITH (NOLOCK) 
+    ON C.Serial = L.ContractRef
+LEFT JOIN [Leasing].dbo.FunCustomerContacts cc WITH (NOLOCK) 
+    ON cc.CifRef = CU.Serial AND cc.ConcatType = 2431
+WHERE C.ContractNo = @ContractNo;";
+
+        var contractData = await connection.QueryFirstOrDefaultAsync<dynamic>(
+            contractSql,
+            new { ContractNo = contractNo });
+
+        if (contractData == null)
+        {
+            return new SendCustomSmsResult
+            {
+                IsSuccess = false,
+                Message = "قراردادی با این شماره یافت نشد."
+            };
+        }
+
+        string? mobile = (string?)contractData.Mobile1;
+        if (string.IsNullOrWhiteSpace(mobile))
+        {
+            return new SendCustomSmsResult
+            {
+                IsSuccess = false,
+                Message = "شماره موبایل برای این قرارداد ثبت نشده است."
+            };
+        }
+
+        long contractRef = (long)contractData.ContractRef;
+
+        await using var transaction = await connection.BeginTransactionAsync();
+        try
+        {
+            const string insertFunSmsSql = @"
+INSERT INTO Leasing.dbo.FUNSms
+    (Mobile, Sms_Text, RegisterDate, RegisterTime, UserRef, ContractRef)
+VALUES
+    (@Mobile, @SmsText, 
+     CAST(FORMAT(GETDATE(), 'yyyyMMdd', 'fa-ir') AS INT),
+     CONVERT(varchar(5), GETDATE(), 108), 
+     @UserRef, @ContractRef);
+
+SELECT CAST(SCOPE_IDENTITY() AS BIGINT);";
+
+            var funSmsId = await connection.ExecuteScalarAsync<long>(
+                insertFunSmsSql,
+                new
+                {
+                    Mobile = mobile,
+                    SmsText = message,
+                    UserRef = darikUserRef.Value,
+                    ContractRef = contractRef
+                },
+                transaction);
+
+            const string insertSmsSendSql = @"
+INSERT INTO [DarikAssistant].[gen].[SmsSend]
+    (Sms_Text, Mobile, RegisterDate, RegisterTime, 
+     ContractRef, DarikFunSmsRef, MessageTemplateRef, UserRef)
+VALUES
+    (@SmsText, @Mobile, 
+     CAST(FORMAT(GETDATE(), 'yyyyMMdd', 'fa-ir') AS INT),
+     CONVERT(varchar(5), GETDATE(), 108),
+     @ContractRef, @DarikFunSmsRef, @MessageTemplateRef, @UserRef);";
+
+            await connection.ExecuteAsync(
+                insertSmsSendSql,
+                new
+                {
+                    SmsText = message,
+                    Mobile = mobile,
+                    ContractRef = contractRef,
+                    DarikFunSmsRef = funSmsId,
+                    MessageTemplateRef = (long?)null,
+                    UserRef = darikUserRef.Value
+                },
+                transaction);
+
+            await transaction.CommitAsync();
+
+            return new SendCustomSmsResult
+            {
+                IsSuccess = true,
+                Message = "پیام با موفقیت ثبت شد.",
+                ContractNo = contractNo,
+                FinalMessage = message
+            };
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync();
+            _logger.LogError(ex,
+                "خطا در درج FUNSms/SmsSend برای پیام دلخواه ContractNo={ContractNo}",
+                contractNo);
+
+            return new SendCustomSmsResult
             {
                 IsSuccess = false,
                 Message = $"خطا در ذخیره در دیتابیس: {ex.Message}"

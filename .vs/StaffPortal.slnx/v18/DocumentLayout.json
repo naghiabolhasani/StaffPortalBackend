@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|d:\\@x cursor area\\staff\\@@staffportalbackendgit\\endpoints\\comprehensivecustomerprofilesendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|solutionrelative:endpoints\\comprehensivecustomerprofilesendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|d:\\@x cursor area\\staff\\@@staffportalbackendgit\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
+              "ToolTip": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-21T08:58:30.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComprehensiveCustomerProfilesEndpoint.cs",
-              "DocumentMoniker": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
-              "RelativeDocumentMoniker": "Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
-              "ToolTip": "D:\\@x Cursor Area\\staff\\@@StaffPortalBackendGit\\Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
-              "RelativeToolTip": "Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAAABwBAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T08:05:07.311Z",
+              "WhenOpened": "2026-11-22T11:53:16.038Z",
               "EditorCaption": ""
             }
           ]

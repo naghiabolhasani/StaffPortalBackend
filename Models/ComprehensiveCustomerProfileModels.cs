@@ -265,3 +265,17 @@ public class SendTemplateSmsResult
     public string? ContractNo { get; set; }
     public string? FinalMessage { get; set; }
 }
+
+public class SendCustomSmsRequest
+{
+    public string? Message { get; set; }
+    public string? ContractNo { get; set; }
+}
+
+public class SendCustomSmsResult
+{
+    public bool IsSuccess { get; set; }
+    public string? Message { get; set; }
+    public string? ContractNo { get; set; }
+    public string? FinalMessage { get; set; }
+}

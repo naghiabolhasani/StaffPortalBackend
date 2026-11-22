@@ -832,6 +832,57 @@
         }
       }
     },
+    "/comprehensive-customer-profile/send-custom-sms": {
+      "post": {
+        "tags": [
+          "ComprehensiveCustomerProfile"
+        ],
+        "description": "ارسال پیامک دلخواه برای قرارداد",
+        "operationId": "ComprehensiveSendCustomSms",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendCustomSmsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SendCustomSmsResultStandardResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectStandardResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectStandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/ContractFacility/search": {
       "post": {
         "tags": [
@@ -3504,6 +3555,68 @@
           "displayOrder": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendCustomSmsRequest": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendCustomSmsResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "finalMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendCustomSmsResultStandardResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/SendCustomSmsResult"
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/PaginationInfo"
+          },
+          "timestamp": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
