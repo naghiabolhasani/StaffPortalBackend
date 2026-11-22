@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\@Staff Portal\\Staff Portal Backend\\xxx StaffPortal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|d:\\@staff portal\\staff portal backend\\xxx staffportal\\endpoints\\comprehensivecustomerprofilesendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28B4990F-052C-8E9D-950C-4108D3078D61}|StaffPortal.csproj|solutionrelative:endpoints\\comprehensivecustomerprofilesendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ComprehensiveCustomerProfilesEndpoint.cs",
+              "DocumentMoniker": "D:\\@Staff Portal\\Staff Portal Backend\\xxx StaffPortal\\Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
+              "RelativeDocumentMoniker": "Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
+              "ToolTip": "D:\\@Staff Portal\\Staff Portal Backend\\xxx StaffPortal\\Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
+              "RelativeToolTip": "Endpoints\\ComprehensiveCustomerProfilesEndpoint.cs",
+              "ViewState": "AgIAADsEAAAAAAAAAAAQwEgEAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T08:05:07.311Z",
+              "EditorCaption": ""
             }
           ]
         }
