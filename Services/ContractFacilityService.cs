@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Threading.Tasks;
 using Dapper;
+using StaffPortal.Common;
 using StaffPortal.Interfaces;
 using StaffPortal.Models;
 using Microsoft.Data.SqlClient;
@@ -53,13 +54,17 @@ public class ContractFacilityService : IContractFacilityService
         FROM leasing..FUNContract co 
         LEFT JOIN leasing..[Installment#] ins ON ins.ContractRef = co.Serial
         LEFT JOIN leasing..FUNCustomer CU ON co.CifRef = CU.Serial
-        LEFT JOIN leasing..FunCustomerContacts cc ON cc.CifRef = cu.Serial AND cc.DefaultAddress = 1 And cc.ConcatType=2431
+        LEFT JOIN leasing..FunCustomerContacts cc ON cc.CifRef = cu.Serial AND cc.DefaultAddress = 1 And cc.ConcatType=@ConcatType
         LEFT JOIN leasing..[Clear#] L ON co.Serial = L.contractref
         LEFT JOIN leasing..BASAgency A ON co.DeliverAgnRef = A.Serial
         WHERE co.ContractNo = @ContractNo
     ";
 
-        var raw = await connection.QuerySingleOrDefaultAsync<dynamic>(sql, new { ContractNo = contractNo });
+        var raw = await connection.QuerySingleOrDefaultAsync<dynamic>(sql, new
+        {
+            ContractNo = contractNo,
+            ConcatType = AppConstants.ContactRelationMain
+        });
         if (raw == null)
             return null;
 

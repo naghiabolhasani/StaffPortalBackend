@@ -20,7 +20,7 @@ public static class CustomerEndpoint
         // ═══════════════════════════════════════════════════════════
         app.MapPost("/customer/search-by-name", HandleSearchByName)
             .WithName("CustomerSearchByName")
-            .WithDescription("جستجوی مشتری با نام (حداکثر ۱۰۰ نتیجه)")
+            .WithDescription("جستجوی پیشرفته مشتری (حداکثر ۱۰۰ نتیجه)")
             .WithTags("Customer")
             .RequireAuthorization()
             .RequirePermission("StaffMainPage.ComprehensiveCustomerProfiles")
@@ -49,9 +49,53 @@ public static class CustomerEndpoint
                 statusCode: 400);
         }
 
+        var mobile = request.Mobile?.Trim();
+        if (!string.IsNullOrWhiteSpace(mobile))
+        {
+            var normalized = StaffPortal.Common.TextNormalizer.NormalizeForSearch(mobile) ?? "";
+            var digits = new string(normalized.Where(char.IsDigit).ToArray());
+            if (digits.Length < 4 || digits.Length > 15)
+            {
+                return Results.Json(
+                    StandardResponse<object>.Failure("شماره موبایل باید بین ۴ تا ۱۵ رقم باشد."),
+                    statusCode: 400);
+            }
+        }
+
+        var nationalCode = request.NationalCode?.Trim();
+        if (!string.IsNullOrWhiteSpace(nationalCode))
+        {
+            var digits = new string(nationalCode.Where(char.IsDigit).ToArray());
+            if (digits.Length < 3 || digits.Length > 10)
+            {
+                return Results.Json(
+                    StandardResponse<object>.Failure("کد ملی باید بین ۳ تا ۱۰ رقم باشد."),
+                    statusCode: 400);
+            }
+        }
+
+        if (!string.IsNullOrWhiteSpace(request.ContractNo) && request.ContractNo.Trim().Length > 30)
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("شماره قرارداد نباید بیش از ۳۰ کاراکتر باشد."),
+                statusCode: 400);
+        }
+
+        if (!string.IsNullOrWhiteSpace(request.InstallmentNo) && request.InstallmentNo.Trim().Length > 50)
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("شماره تسهیلات نباید بیش از ۵۰ کاراکتر باشد."),
+                statusCode: 400);
+        }
+
         try
         {
-            var data = await service.SearchByNameAsync(request.Name);
+            var data = await service.SearchByNameAsync(
+                request.Name,
+                mobile,
+                nationalCode,
+                request.ContractNo,
+                request.InstallmentNo);
 
             return Results.Ok(new StandardResponse<List<CustomerModel>>
             {

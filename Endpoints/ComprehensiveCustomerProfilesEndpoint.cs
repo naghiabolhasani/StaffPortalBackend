@@ -21,7 +21,7 @@ public static class ComprehensiveCustomerProfileEndpoints
         // ═══════════════════════════════════════════════════════════════
         app.MapPost("/comprehensive-customer-profile/base-info", HandleBaseInfo)
             .WithName("ComprehensiveBaseInfo")
-            .WithDescription("دریافت اطلاعات پایه مشتری (کد ملی یا شماره قرارداد)")
+            .WithDescription("دریافت اطلاعات پایه مشتری (کد ملی، شماره قرارداد یا شماره تسهیلات)")
             .WithTags("ComprehensiveCustomerProfile")
             .RequireAuthorization()
             .RequirePermission("StaffMainPage.ComprehensiveCustomerProfiles")
@@ -958,12 +958,15 @@ public static class ComprehensiveCustomerProfileEndpoints
     {
         var nationalCode = request.NationalCode?.Trim();
         var contractNo = request.ContractNo?.Trim();
+        var installmentNo = request.InstallmentNo?.Trim();
 
-        if (string.IsNullOrEmpty(nationalCode) && string.IsNullOrEmpty(contractNo))
+        if (string.IsNullOrEmpty(nationalCode) &&
+            string.IsNullOrEmpty(contractNo) &&
+            string.IsNullOrEmpty(installmentNo))
         {
             return Results.Json(
                 StandardResponse<object>.Failure(
-                    "حداقل یکی از فیلدها (کد ملی یا شماره قرارداد) باید وارد شود."),
+                    "حداقل یکی از فیلدها (کد ملی، شماره قرارداد یا شماره تسهیلات) باید وارد شود."),
                 statusCode: 400);
         }
 
@@ -975,9 +978,18 @@ public static class ComprehensiveCustomerProfileEndpoints
                 statusCode: 400);
         }
 
+        if (!string.IsNullOrEmpty(installmentNo) &&
+            (installmentNo.Length > 50 ||
+             !InputValidator.IsSafeString(installmentNo, @"^[A-Za-z0-9._-]{1,50}$")))
+        {
+            return Results.Json(
+                StandardResponse<object>.Failure("شماره تسهیلات نامعتبر است."),
+                statusCode: 400);
+        }
+
         try
         {
-            var data = await service.GetBaseInfoAsync(nationalCode, contractNo);
+            var data = await service.GetBaseInfoAsync(nationalCode, contractNo, installmentNo);
 
             if (data == null || data.Count == 0)
             {

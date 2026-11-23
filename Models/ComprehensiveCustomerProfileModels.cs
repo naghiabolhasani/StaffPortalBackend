@@ -7,6 +7,7 @@ public class ComprehensiveBaseInfoRequest
 {
     public string? NationalCode { get; set; }
     public string? ContractNo { get; set; }
+    public string? InstallmentNo { get; set; }
 }
 
 // ===== Response: Base Info (Query 1) =====

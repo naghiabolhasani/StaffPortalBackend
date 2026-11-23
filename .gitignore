@@ -37,3 +37,11 @@ project.fragment.lock.json
 # OS
 .DS_Store
 Thumbs.db
+
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+*.dll
+*.exe

@@ -12,7 +12,12 @@ public interface ICustomerService
     /// <summary>
     /// جستجو بر اساس نام — حداکثر ۱۰۰ نتیجه
     /// </summary>
-    Task<List<CustomerModel>> SearchByNameAsync(string? name);
+    Task<List<CustomerModel>> SearchByNameAsync(
+        string? name,
+        string? mobile,
+        string? nationalCode,
+        string? contractNo,
+        string? installmentNo);
 
     // 📌 متدهاى آینده (در صورت نیاز باز کن):
     // Task<CustomerModel?> GetByNationalCodeAsync(string nationalCode);

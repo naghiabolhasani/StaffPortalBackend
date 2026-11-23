@@ -43,7 +43,8 @@ public class ComprehensiveCustomerProfileService : IComprehensiveCustomerProfile
     // ═══════════════════════════════════════════════════════════════
     public async Task<List<ComprehensiveBaseInfoItem>> GetBaseInfoAsync(
         string? nationalCode,
-        string? contractNo)
+        string? contractNo,
+        string? installmentNo)
     {
         //        const string sql = @"
         //DECLARE @NC NVARCHAR(20) = @NationalCode;
@@ -119,7 +120,7 @@ public class ComprehensiveCustomerProfileService : IComprehensiveCustomerProfile
         //Left Outer Join Leasing..UGSInfo U WITH (NOLOCK) ON R.GRef = U.Serial
         //LEFT JOIN [Leasing].dbo.FunCustomerContacts cc WITH (NOLOCK) 
         //    ON cc.CifRef = CU.Serial 
-        //   AND cc.ConcatType = 2431
+        //   AND cc.ConcatType = @ConcatType
 
         //LEFT JOIN [Leasing].dbo.BASLookup BL WITH (NOLOCK) 
         //    ON C.Status = BL.Code 
@@ -182,7 +183,7 @@ LEFT JOIN Leasing..UGSInfo U WITH (NOLOCK)
     ON R.GRef = U.Serial
 LEFT JOIN [Leasing].dbo.FunCustomerContacts cc WITH (NOLOCK)
     ON cc.CifRef = CU.Serial
-   AND cc.ConcatType = 2431
+   AND cc.ConcatType = @ConcatType
 LEFT JOIN DarikAssistant.dbo.ContractGrade G WITH (NOLOCK)
     ON C.Serial = G.ContractRef
 LEFT JOIN [Leasing].dbo.BASLookup BL WITH (NOLOCK)
@@ -207,14 +208,18 @@ LEFT JOIN (
 WHERE
     (@NationalCode <> N'' AND CU.NationalCode = @NationalCode)
     OR
-    (@ContractNo <> N'' AND C.ContractNo = @ContractNo);
+    (@ContractNo <> N'' AND C.ContractNo = @ContractNo)
+    OR
+    (@InstallmentNo <> N'' AND C.InstallmentNo = @InstallmentNo);
 ";
 
         await using var connection = new SqlConnection(_connectionString);
         var result = await connection.QueryAsync<ComprehensiveBaseInfoItem>(sql, new
         {
             NationalCode = nationalCode ?? string.Empty,
-            ContractNo = contractNo ?? string.Empty
+            ContractNo = contractNo ?? string.Empty,
+            InstallmentNo = installmentNo ?? string.Empty,
+            ConcatType = AppConstants.ContactRelationMain
         });
 
         return result.ToList();
@@ -737,7 +742,7 @@ LEFT OUTER JOIN (
             ELSE ''
         END AS HomeTel
     FROM Leasing.dbo.FunCustomerContacts WITH (NOLOCK)
-    WHERE ConcatType = 2431
+    WHERE ConcatType = @ConcatType
 ) AS FunCustomerContacts
     ON FUNCustomer_1.Serial = FunCustomerContacts.CifRef
 LEFT OUTER JOIN Leasing.dbo.[ContractStatus#] AS CS WITH (NOLOCK)
@@ -752,7 +757,8 @@ ORDER BY RowNumber;";
         await using var connection = new SqlConnection(_connectionString);
         var result = await connection.QueryAsync<AlarmsItem>(sql, new
         {
-            ContractNo = contractNo
+            ContractNo = contractNo,
+            ConcatType = AppConstants.ContactRelationMain
         });
 
         return result.ToList();
@@ -1273,12 +1279,12 @@ INNER JOIN Leasing.dbo.FUNCustomer CU WITH (NOLOCK)
 INNER JOIN Leasing.dbo.[Clear#] L WITH (NOLOCK) 
     ON C.Serial = L.ContractRef
 LEFT JOIN [Leasing].dbo.FunCustomerContacts cc WITH (NOLOCK) 
-    ON cc.CifRef = CU.Serial AND cc.ConcatType = 2431
+    ON cc.CifRef = CU.Serial AND cc.ConcatType = @ConcatType
 WHERE C.ContractNo = @ContractNo;";
 
         var contractData = await connection.QueryFirstOrDefaultAsync<dynamic>(
             contractSql,
-            new { ContractNo = contractNo });
+            new { ContractNo = contractNo, ConcatType = AppConstants.ContactRelationMain });
 
         if (contractData == null)
         {
@@ -1465,12 +1471,12 @@ INNER JOIN Leasing.dbo.FUNCustomer CU WITH (NOLOCK)
 INNER JOIN Leasing.dbo.[Clear#] L WITH (NOLOCK) 
     ON C.Serial = L.ContractRef
 LEFT JOIN [Leasing].dbo.FunCustomerContacts cc WITH (NOLOCK) 
-    ON cc.CifRef = CU.Serial AND cc.ConcatType = 2431
+    ON cc.CifRef = CU.Serial AND cc.ConcatType = @ConcatType
 WHERE C.ContractNo = @ContractNo;";
 
         var contractData = await connection.QueryFirstOrDefaultAsync<dynamic>(
             contractSql,
-            new { ContractNo = contractNo });
+            new { ContractNo = contractNo, ConcatType = AppConstants.ContactRelationMain });
 
         if (contractData == null)
         {

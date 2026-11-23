@@ -8,7 +8,8 @@ public interface IComprehensiveCustomerProfileService
 {
     Task<List<ComprehensiveBaseInfoItem>> GetBaseInfoAsync(
         string? nationalCode,
-        string? contractNo);
+        string? contractNo,
+        string? installmentNo);
     Task<SendTemplateSmsResult> SendTemplateSmsAsync(long templateMessageId, string contractNo, long userId);
     Task<SendCustomSmsResult> SendCustomSmsAsync(string message, string contractNo, long userId);
     Task<UpdateRahbarResult> UpdateRahbarAsync(string contractNo, string installmentNo);
